@@ -1,3 +1,96 @@
+![C:\\Users\\Josenilda\\Documents\\projeto monografia\\slogan da
+ufcg.jpg](./media/image1.jpg){width="1.2in"
+height="1.1215277777777777in"}
+
+**UNIVERSIDADE FEDERAL DE CAMPINA GRANDE**
+
+**CENTRO DE ENGENHARIA ELÉTRICA E INFORMÁTICA**
+
+**CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO**
+
+**THÚLIO ÍCARO CASTRO CARVALHO**
+
+**[Avaliação de Uso de Cache em Catálogos de Ecommerce em Plataformas
+Multitenants]{.smallcaps}**
+
+**CAMPINA GRANDE - PB**
+
+**2023**
+
+**THÚLIO ÍCARO CASTRO CARVALHO**
+
+**[Avaliação de Uso de Cache em Catálogos de Ecommerce em Plataformas
+Multitenants]{.smallcaps}**
+
+> **Trabalho de Conclusão Curso apresentado ao Curso Bacharelado em
+> Ciência da Computação do Centro de Engenharia Elétrica e Informática
+> da Universidade Federal de Campina Grande, como requisito parcial para
+> obtenção do título de Bacharel em Ciência da Computação.**
+
+**Orientador : Thiago Emmanuel Pereira**
+
+**CAMPINA GRANDE - PB**
+
+**2023**
+
+**THÚLIO ÍCARO CASTRO CARVALHO**
+
+**Avaliação de Uso de Cache em Catálogos de Ecommerce em Plataformas
+Multitenants**
+
+> **Trabalho de Conclusão Curso apresentado ao Curso Bacharelado em
+> Ciência da Computação do Centro de Engenharia Elétrica e Informática
+> da Universidade Federal de Campina Grande, como requisito parcial para
+> obtenção do título de Bacharel em Ciência da Computação.**
+
+**BANCA EXAMINADORA:**
+
+**Thiago Emmanuel Pereira\
+Orientador -- UASC/CEEI/UFCG**
+
+**Roberto Medeiros de Faria\
+Examinador -- UASC/CEEI/UFCG**
+
+**Francisco Vilar Brasileiro\
+Professor da Disciplina TCC -- UASC/CEEI/UFCG**
+
+**Trabalho aprovado em: 03 de JULHO de 2023.\
+**
+
+**CAMPINA GRANDE - PB**
+
+**RESUMO**
+
+Um requisito comum para plataformas de comércio eletrônico é o
+gerenciamento de catálogos de produtos. Em catálogos grandes e
+*multitenants*, o gerenciamento de latências é um desafio, e o
+armazenamento em cache geralmente é empregado para melhorar o
+desempenho. Ao observar uma solução de catálogo de uma grande empresa de
+comércio eletrônico, identificamos o que os engenheiros consideravam um
+sistema de cache com qualidade abaixo do ideal. Com base em experiências
+anteriores, os engenheiros da empresa acreditam que as características
+da carga de trabalho afetam o desempenho do cache. Este trabalho visa
+verificar essa hipótese. Usamos *traces* coletados de requisições de
+produção para analisar e entender as características da carga de
+trabalho, bem como relacioná-las com o comportamento do cache.
+
+**Evaluation of Cache Usage on Ecommerce Catalogs of Multitenant
+Platforms**
+
+**ABSTRACT**
+
+A common requirement for ecommerce platforms is the management of
+product catalogs. On large, multitenant, catalogs, the managing
+latencies is a challenge, and caching is usually employed to enhance
+performance. By observing a catalog solution of a large ecommerce
+company, we identified what engineers thought was a sub-optimal cache
+system. Based on previous experience, the engineers of the company
+believe that the characteristics of the workload impact cache
+performance. This work aims to verify this belief. We use traces
+collected from production incoming requests to analyze and understand
+the workload characteristics, as well as relate them with the cache
+behavior.
+
 **Evaluation of Cache Usage on Ecommerce Catalogs of Multitenant
 Platforms**
 
@@ -150,7 +243,7 @@ information about products. Additional features such as ranked
 retrieval, spell checking queries, etc. are also important to deliver
 quality informations and products to the users.
 
-![](media/image3.png){width="3.3333333333333335in"
+![](./media/image3.png){width="3.3333333333333335in"
 height="1.1527777777777777in"}
 
 When a user makes a query to the product catalog, it will first hit the
@@ -259,7 +352,7 @@ The 55% hit ratio, however, isn't stable over time. In the time-frame of
 our analysis, the standard deviation was around 7% of the mean. This
 behavior can be seen below.
 
-![](media/image2.png){width="3.3333333333333335in"
+![](./media/image2.png){width="3.3333333333333335in"
 height="2.0555555555555554in"}
 
 Multitenancy
@@ -273,7 +366,7 @@ analyze how some metrics relate to the tenants.
 At first, we learn how the requests are distributed between tenants -
 this shows us the popularity of the tenants.
 
-![](media/image5.png){width="3.3333333333333335in"
+![](./media/image5.png){width="3.3333333333333335in"
 height="2.0972222222222223in"}
 
 This plot shows us the distribution of requests by tenants. We can see
@@ -290,7 +383,7 @@ many requests, as seen with some examples in the next table.
 We can't, however, correlate this high concentration with the hit ratio
 of the tenants, as seen below (correlation coefficient of 0.09).
 
-![](media/image4.png){width="3.3333333333333335in"
+![](./media/image4.png){width="3.3333333333333335in"
 height="2.013888888888889in"}
 
 CONCLUSION
